@@ -2,6 +2,8 @@
 
 Take home intern assessment. Created with Reactjs
 
+[Demo](https://wavescan-take-home.vercel.app)
+
 ### Main Page
 
 ![Main Page](./pictures/mainpage.PNG)
