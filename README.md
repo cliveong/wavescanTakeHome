@@ -1,5 +1,14 @@
 # WaveScan frontend
 
+Take home intern assessment. Created with Reactjs
+
+### Main Page
+
+![Main Page](./pictures/mainpage.PNG)
+
+### Success Page
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -21,3 +30,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+Credits:
+
+Background Image from [Luke Cheeser](https://unsplash.com/@lukechesser) on [Unsplash](https://unsplash.com/photos/pJadQetzTkI)
