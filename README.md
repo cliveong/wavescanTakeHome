@@ -8,6 +8,7 @@ Take home intern assessment. Created with Reactjs
 
 ### Success Page
 
+![Success Page](./pictures/successpage.PNG)
 
 # Getting Started with Create React App
 
