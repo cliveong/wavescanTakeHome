@@ -1,0 +1,69 @@
+.successPage {
+  width: 100vw;
+  height: 100vh;
+  /* font-size: 1.3rem; */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.2)),url("./luke-chesser-pJadQetzTkI-unsplash.jpg");
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: left;
+  }
+
+.wrapper>div {
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(130, 130, 130);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 1.3rem;
+    overflow: scroll;
+}
+
+.scannerCount {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 5px 10px;
+}
+
+tr td button {
+    height: 35px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid rgb(16, 123, 180);
+    transition-duration: 0.3s;
+    background-color: rgb(16, 123, 180);
+    font-weight: 700;
+    color: white;
+}
+
+tr td button:hover {
+    background-color: white;
+    color: rgb(16, 123, 180);
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper>div {
+        padding: 5px;
+        font-size: 0.8rem;
+        overflow-x: scroll;
+    }
+
+    tr td button {
+        height: 20px;
+        padding: 5px 5px;
+        font-weight: normal;
+        font-size: 0.7rem;
+    }
+
+    th, td {
+        padding: 0px 5px;
+    }
+}

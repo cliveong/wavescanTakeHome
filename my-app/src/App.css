@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+.appPage {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.3rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.2)),url("./luke-chesser-pJadQetzTkI-unsplash.jpg");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul, li {
+  list-style: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  padding: 60px 40px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgb(130, 130, 130);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px
+}
+
+.form ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.form ul li input[type="text"], .form ul li input[type="number"] {
+  height: 30px;
+  border-radius: 5px;
+  border: 0.5px solid gray;
+  font-size: 1.2rem;  
+}
+
+form ul li select {
+  height: 36px;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.2rem;
+}
+
+form ul li select option{
+  font-size: 1.2rem;
+}
+
+.dimensions input{
+  margin: 0 5px;
+}
+
+input[type="submit"] {
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(62, 122, 173);
   color: white;
+  font-size: 1.2rem;
+  transition-duration: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="submit"]:hover {
+  border: 1px solid rgb(62, 122, 173);
+  background-color: white;
+  color: rgb(62, 122, 173);
+  font-size: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#scanDimensionsX {
+  margin-right: 15px;
+}
+
+.dimensions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }

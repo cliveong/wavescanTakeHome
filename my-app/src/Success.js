@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./Success.css"
 const Success = () => {
     const [arrayOfInfo, setArrayOfInfo] = useState([]);
 
@@ -10,57 +10,51 @@ const Success = () => {
             .catch(e => console.log(e)) 
     }, []);
 
-    const returnTable = (data) => {
-        return (data.map((item) => {
-            console.log(item)
-            return (
-                <tr>
-                    <td>{item.scannerName}</td>
-                    <td>{item.ipAddress}</td>
-                    <td>{item.scannerSpeed}</td>
-                    <td>{item.isAvailable}</td>
-                    <td><button>Connect</button></td>
-                </tr>
-            );
-        }))
-    }
-
     return (
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            Scanner Name
-                        </th>
-                        <th>
-                        IP Address
-                        </th>
-                        <th>
-                            Scanner Speed
-                        </th>
-                        <th>
-                            Status
-                        </th>
-                        <th>
-            
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {arrayOfInfo.map(item => {
-                        return (
+        <div className="successPage">
+            <div className="wrapper">
+                <div>
+                    <div className="scannerCount">
+                        Scanner count: {arrayOfInfo.length}
+                    </div>
+                    <table>
+                        <thead>
                             <tr>
-                                <td>{item.scannerName}</td>
-                                <td>{item.ipAddress}</td>
-                                <td>{item.scannerSpeed}</td>
-                                <td>{item.isAvailable}</td>
-                                <td><button>Connect</button></td>
+                                <th>
+                                    Scanner Name
+                                </th>
+                                <th>
+                                IP Address
+                                </th>
+                                <th>
+                                    Scanner Speed
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                    
+                                </th>
                             </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
+                        </thead>
+                        <tbody>
+                            {arrayOfInfo.map(item => {
+                                return (
+                                    <tr>
+                                        <td>{item.scannerName}</td>
+                                        <td>{item.ipAddress}</td>
+                                        <td>{item.scannerSpeed}</td>
+                                        <td>{item.isAvailable}</td>
+                                        <td><button>Connect</button></td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
         </div>
     )
 }

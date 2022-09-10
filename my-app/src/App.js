@@ -14,11 +14,6 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(typeof inputProjectName)
-        console.log(typeof inputScanningMode)
-        console.log(typeof inputScanDimensionsX)
-        console.log(typeof inputScanDimensionsY)
-        console.log(typeof inputScannerFreq)
         fetch("https://wavescan-internship.saurabhmudgal.repl.co/submitForm", {
             method: 'POST',
             body: JSON.stringify({
@@ -49,8 +44,8 @@ function App() {
     }
 
     return (
-        <div>
-            <form onSubmit={e => {handleSubmit(e)}}>
+        <div className='appPage'>
+            <form className="form" onSubmit={e => {handleSubmit(e)} }>
                 <ul>
                     <li>
                         <label htmlFor="projectName">
@@ -77,17 +72,21 @@ function App() {
                         <div>
                             Scan Dimensions (cm)
                         </div>
-                        <div>
-                            <label htmlFor="scanDimensionsX">
-                                X
-                            </label>
-                            <input type="number" step="1" name="scanDimensionsX" id='scanDimensionsX'
-                            onChange={e => setInputScanDimensionsX(e.target.value)}/>
-                            <label htmlFor="scanDimensionsY">
-                                Y
-                            </label>
-                            <input type="number" step="1" name="scanDimensionsY" id='scanDimensionsY'
-                            onChange={e => setInputScanDimensionsY(e.target.value)}/>
+                        <div className='dimensions'>
+                            <div>
+                                <label htmlFor="scanDimensionsX">
+                                    X
+                                </label>
+                                <input type="number" step="1" name="scanDimensionsX" id='scanDimensionsX'
+                                onChange={e => setInputScanDimensionsX(e.target.value)}/>
+                            </div>
+                            <div>
+                                <label htmlFor="scanDimensionsY">
+                                    Y
+                                </label>
+                                <input type="number" step="1" name="scanDimensionsY" id='scanDimensionsY'
+                                onChange={e => setInputScanDimensionsY(e.target.value)}/>
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -102,7 +101,6 @@ function App() {
                     </li>
                 </ul>
             </form>
-            <button onClick={() => navigate(`./success`)}></button>
         </div>
     );
 };
